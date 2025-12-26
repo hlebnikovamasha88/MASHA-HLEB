@@ -1,0 +1,320 @@
+/* --- ABOUT/CONTACT SECTION --- */
+.about-flex {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
+  gap: 40px;
+  position: relative;
+}
+.about-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'Arial Black', Impact, 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #111;
+  margin-right: 24px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-photo {
+  width: 420px;
+  max-width: 100vw;
+  height: auto;
+  box-shadow: 0 4px 24px #0002;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #fff;
+}
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+.about-name {
+  font-family: 'Arial Black', Impact, 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-size: 32px;
+  color: #111;
+  margin-bottom: 18px;
+}
+.about-desc {
+  font-family: 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+.about-contacts {
+  font-family: 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 18px;
+  color: #111;
+  margin-top: 12px;
+  font-weight: 700;
+}
+.about-contacts a {
+  color: #111;
+  text-decoration: none;
+  margin-right: 18px;
+  font-weight: 700;
+}
+/* --- Contact section: black text, Avenir Next Regular, 12px --- */
+#contact, #contact * {
+  color: #111 !important;
+  font-family: 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+}
+#contact a {
+  color: #111 !important;
+  text-decoration: none !important;
+}
+.menu-item.logo {
+  text-transform: uppercase !important;
+}
+/* Four-in-a-row grid for photos.html */
+.photos-four-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
+}
+
+.photos-four-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 2px 16px #0001;
+}
+}
+.top-menu .menu a {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+/* (reverted forced .top-menu font styles) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ========================
+  Шрифт Google Sans / Montserrat
+======================== */
+.global-font {
+  /* Системный/резервный sans-стек для всего сайта */
+}
+body {
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, Verdana, Geneva, sans-serif;
+  background: #ffffff; /* явно белый фон страницы */
+  margin: 0; /* убрать дефолтные отступы браузера, чтобы навбар был у краёв */
+}
+.google-sans {
+  font-family: inherit;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+
+.google-sans-bold {
+  font-family: inherit;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+/* ========================
+   Контактная секция
+======================== */
+#contact {
+  padding: 50px 20px;
+}
+
+#contact .contact-wrapper {
+  display: flex;
+  align-items: flex-start; /* выравнивание по верхнему краю фото */
+  gap: 40px;
+  flex-wrap: wrap; /* адаптивно */
+}
+
+#contact img {
+  width: 800px; /* увеличено по запросу */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* (removed .contact-photo rollback to previous state) */
+
+#contact .contact-text {
+  text-align: left;
+  max-width: 600px;
+}
+
+/* ========================
+   Верхняя панель навигации
+======================== */
+.top-menu {
+  position: sticky;
+  top: 0.5cm;
+  background: #ffffff;
+  z-index: 100;
+  margin: 0.5cm;
+  padding: 12px 20px; /* вернём отступы внутри навбара */
+  display: flex;
+  justify-content: space-between; /* логотип слева, меню справа */
+  align-items: center;
+    top: 0;
+    margin: 0;
+    padding: 32px 48px;
+}
+
+.top-menu .menu {
+  display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.top-menu a,
+.top-menu .logo,
+.top-menu .menu a,
+.top-menu .menu .logo {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  font-size: 22px !important;
+  line-height: 1.2;
+}
+
+.top-menu .logo,
+.top-menu .menu .logo {
+  font-weight: 700;
+}
+
+/* Логотип как изображение: центр внутри своего слота */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px; /* фиксированная ширина для логотипа, можно менять */
+}
+.logo img {
+  max-height: 56px;
+  width: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Photos grid for 4 vertical images in a row */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  align-items: stretch;
+  min-height: 1px;
+}
+  width: 100%;
+  overflow: visible;
+  min-height: 1px;
+}
+.masonry-grid img {
+  .masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 12px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+}
+.masonry-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 2px 16px #0001;
+  object-fit: cover;
+}
+}
+}
+.photos-grid .photo-item.placeholder {
+  background: #fafafa;
+  border: 2px dashed #e0e0e0;
+  min-height: 1px;
+}
+
+/* Masonry gallery for photos.html */
+.masonry-gallery {
+  column-count: 4;
+  column-gap: 10px;
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+.masonry-gallery img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px #0001;
+  break-inside: avoid;
+}
+
+@media (max-width: 900px) {
+  .photos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    width: 70%; /* на 10% больше чем было при 60% */
+    height: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5cm 0; /* отступ сверху/снизу */
+  min-height: calc(100vh - 3cm); /* занимает почти весь экран, оставляя место под/над навбаром */
+  box-sizing: border-box;
+}
+.hero img {
+  /* уменьшено на 25% от предыдущих размеров */
+  width: 67.5%; /* 90% * 0.75 */
+  max-width: 900px; /* 1200px * 0.75 */
+  max-height: 60vh; /* уменьшено на 25% */
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Для домашней страницы показываем фотографию целиком (оригинальное соотношение сторон).
+   Масштабируется по ширине при необходимости, не обрезается. */
+.home .hero img {
+  /* Принудительно уменьшить изображение на главной */
+  width: auto !important;
+  max-width: 45% !important;
+  height: auto !important;
+  max-height: 45vh !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
