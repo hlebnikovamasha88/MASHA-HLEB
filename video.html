@@ -21,26 +21,28 @@
 <div style="margin-top:32px;"></div>
 
 <div class="video-grid">
-  <video class="video-item" src="camara videos/Full HD.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
-  <video class="video-item" src="camara videos/full Lucia.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
-  <video class="video-item" src="camara videos/Mia.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
-  <video class="video-item" src="camara videos/test full.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
-  <video class="video-item" src="camara videos/OSOI 709A.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
+  <div class="video-wrap"><video class="video-item" src="camara videos/Full HD.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/full Lucia.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/Mia.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/test full.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/OSOI 709A.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
 </div>
 <script>
-// Включать звук только при взаимодействии
-document.querySelectorAll('video').forEach(video => {
-  video.addEventListener('volumechange', function() {
-    if (!video.muted && video.volume > 0) {
-      video.muted = false;
-    }
+// Кастомная кнопка mute/unmute появляется при наведении
+document.querySelectorAll('.video-wrap').forEach(function(wrap) {
+  const video = wrap.querySelector('video');
+  const btn = wrap.querySelector('.mute-btn');
+  video.muted = true;
+  wrap.addEventListener('mouseenter', function() {
+    btn.style.display = 'block';
   });
-  video.addEventListener('play', function() {
-    video.muted = true;
+  wrap.addEventListener('mouseleave', function() {
+    btn.style.display = 'none';
   });
-  video.addEventListener('click', function() {
-    video.muted = false;
-    video.volume = 1;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    video.muted = !video.muted;
+    btn.textContent = video.muted ? '🔈' : '🔊';
   });
 });
 </script>
