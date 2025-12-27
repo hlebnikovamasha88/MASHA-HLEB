@@ -1,3 +1,83 @@
+body {
+  background: #fff !important;
+}
+.hero {
+  background: #fff !important;
+}
+section {
+  background: #fff !important;
+}
+.masonry-gallery {
+  background: #fff !important;
+}
+body {
+  background: #fff !important;
+}
+/* Masonry grid for photos */
+.masonry-gallery {
+  column-count: 4;
+  column-gap: 18px;
+  max-width: 1600px;
+  margin: 40px auto 0 auto;
+}
+.masonry-photo {
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: none !important;
+  display: block;
+  break-inside: avoid;
+  cursor: pointer;
+  background: #fff !important;
+  border: none !important;
+  outline: none !important;
+}
+.masonry-gallery {
+  background: #fff !important;
+}
+body {
+  background: #fff !important;
+}
+
+.masonry-photo:hover {
+  box-shadow: 0 8px 32px #0004;
+}
+/* Видео-сетка для страницы VIDEO */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1800px;
+  margin: 48px auto 0 auto;
+  padding: 0 0 0 0;
+}
+.video-item {
+  width: 100%;
+  max-width: 850px;
+  height: 480px;
+  background: #000;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+/* Фото на главной странице как в слайдере */
+.main-home-photo {
+  max-width: 420px;
+  max-height: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 24px #0002;
+  border-radius: 0;
+}
+.about-name {
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.top-menu .logo, .top-menu .menu-item {
+  text-transform: uppercase;
+}
 .about-photo {
   width: 100%;
   max-width: 288px;
@@ -28,12 +108,56 @@
   }
 }
 /* --- ABOUT/CONTACT SECTION --- */
+body, html {
+  font-family: 'Montserrat', 'Arial', sans-serif !important;
+  font-weight: 400;
+  font-size: 18px;
+  color: #222;
+  letter-spacing: 0.01em;
+  background: #fff;
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px 0 48px;
+  font-family: 'Montserrat', 'Arial', sans-serif !important;
+  font-weight: 700;
+  font-size: 22px;
+  background: none;
+}
+.top-menu .logo {
+  font-family: 'Montserrat', 'Arial', sans-serif !important;
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  color: #222;
+  text-decoration: none;
+  margin-right: 32px;
+  white-space: nowrap;
+}
+.top-menu .menu {
+  display: flex;
+  gap: 32px;
+}
+.top-menu .menu-item {
+  font-family: 'Montserrat', 'Arial', sans-serif !important;
+  font-weight: 700;
+  font-size: 22px;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.top-menu .menu-item:hover {
+  color: #888;
+}
 .about-flex {
   display: flex;
   align-items: flex-start;
   max-width: 1200px;
   margin: 60px auto 0 auto;
-  gap: 40px;
+  gap: 0px;
   position: relative;
 }
 .about-label {
@@ -71,12 +195,13 @@
   margin-left: 0;
 }
 .about-name {
-  font-family: 'Arial Black', Impact, 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
-  font-weight: 900 !important;
-  font-style: normal !important;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
   font-size: 32px;
   color: #111;
   margin-bottom: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .about-desc {
   font-family: 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -90,19 +215,17 @@
   font-size: 18px;
   color: #111;
   margin-top: 12px;
-  font-weight: 700;
+  font-weight: 400;
 }
 .about-contacts a {
   color: #111;
   text-decoration: none;
   margin-right: 18px;
-  font-weight: 700;
+  font-weight: 400;
 }
 /* --- Contact section: black text, Avenir Next Regular, 12px --- */
 #contact, #contact * {
   color: #111 !important;
-  font-family: 'Avenir Next', Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
-  font-weight: 400 !important;
   font-size: 18px !important;
   line-height: 1.2 !important;
   text-decoration: none !important;

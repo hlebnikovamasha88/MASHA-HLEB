@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Camara videos - MASHA HLEB</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,28 +18,29 @@
   </div>
 </nav>
 
+<div style="margin-top:32px;"></div>
 
-
-<div style="display:flex; flex-direction:column; gap:30px; align-items:center;">
-
-  <video width="1000" height="580" controls>
-    <source src="camara videos/Full HD.mp4" type="video/mp4">
-  </video>
-
-  <video width="1000" height="580" controls>
-    <source src="camara videos/full Lucia.mp4" type="video/mp4">
-  </video>
-
-  <video width="1000" height="580" controls poster="covers for video/MIA.png">
-    <source src="camara videos/Mia.mp4" type="video/mp4">
-  </video>
-
-  <video width="1000" height="580" controls>
-    <source src="camara videos/OSOI 709A.mp4" type="video/mp4">
-  </video>
-
-  <video width="1000" height="580" controls>
-    <source src="camara videos/test full.mp4" type="video/mp4">
-  </video>
-
+<div class="video-grid">
+  <video class="video-item" src="camara videos/Full HD.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
+  <video class="video-item" src="camara videos/full Lucia.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
+  <video class="video-item" src="camara videos/Mia.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
+  <video class="video-item" src="camara videos/test full.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
+  <video class="video-item" src="camara videos/OSOI 709A.mp4" controls autoplay muted loop playsinline onplay="this.muted=true;"></video>
 </div>
+<script>
+// Включать звук только при взаимодействии
+document.querySelectorAll('video').forEach(video => {
+  video.addEventListener('volumechange', function() {
+    if (!video.muted && video.volume > 0) {
+      video.muted = false;
+    }
+  });
+  video.addEventListener('play', function() {
+    video.muted = true;
+  });
+  video.addEventListener('click', function() {
+    video.muted = false;
+    video.volume = 1;
+  });
+});
+</script>
