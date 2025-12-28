@@ -1,6 +1,6 @@
 /* === Минималистичные компактные стили для всего сайта === */
 html, body {
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-family: 'Montserrat', Arial, sans-serif !important;
   font-weight: 400 !important;
   letter-spacing: 0.01em !important;
@@ -10,7 +10,7 @@ html, body {
 }
 /* Только .logo жирным, меню — узким */
 h1, h2, h3 {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.04em !important;
 }
@@ -23,7 +23,7 @@ h1, h2, h3 {
   color: #888;
 }
 p, li, span, a, div, td, th, label, input, textarea {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
 }
 .top-menu {
   display: flex;
@@ -47,7 +47,7 @@ p, li, span, a, div, td, th, label, input, textarea {
   white-space: nowrap;
   text-decoration: none;
   color: #222 !important;
-  font-size: 1.4rem !important;
+  font-size: 1.2rem !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
 }
@@ -101,13 +101,14 @@ p, li, span, a, div, td, th, label, input, textarea {
 }
 .video-item {
   width: 100%;
+  width: 100%;
   height: auto;
   background: #000;
   border-radius: 0;
   object-fit: contain;
   display: block;
   max-width: 100%;
-  max-height: 420px;
+  max-height: none;
 }
 .video-wrap {
   position: relative;
@@ -115,18 +116,24 @@ p, li, span, a, div, td, th, label, input, textarea {
   align-items: center;
   justify-content: center;
 }
-.mute-btn {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background: rgba(255,255,255,0.85);
+  .video-item {
+    max-width: 100vw;
+    height: auto;
+    object-fit: contain;
+    max-height: none;
+  }
+    max-height: none;
+  }
   border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 1.2em;
-  color: #222;
-  cursor: pointer;
+  .video-item {
+    max-width: 100vw;
+    height: auto;
+    object-fit: contain;
+    max-height: none;
+  }
+    object-fit: contain;
+    max-height: none;
+  }
   box-shadow: 0 2px 8px #0002;
   transition: background 0.2s, opacity 0.2s;
   opacity: 0.85;
