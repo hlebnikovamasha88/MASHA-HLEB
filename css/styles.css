@@ -90,10 +90,22 @@ p, li, span, a, div, td, th, label, input, textarea {
   color: #888 !important;
 }
   .masonry-gallery {
-     column-count: 4;
-     column-gap: 18px;
-     max-width: 1600px;
-     margin: 40px auto 0 auto;
+    column-count: 4;
+    column-gap: 0;
+    max-width: 1600px;
+    margin: 40px auto 0 auto;
+  }
+  .masonry-photo {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    box-shadow: none !important;
+    background: #fff !important;
+    border: none !important;
+    outline: none !important;
+    vertical-align: top;
+    padding: 0;
+    object-fit: cover;
   }
   .masonry-gallery .masonry-photo:nth-child(-n+4) {
     grid-row: 1;
