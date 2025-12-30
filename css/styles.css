@@ -33,7 +33,7 @@
     padding: 0;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 600px) {
     .short-videos-grid {
       grid-template-columns: repeat(3, 1fr);
     }
