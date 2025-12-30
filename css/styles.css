@@ -17,6 +17,39 @@
     max-width: 1600px;
     margin: 40px auto 0 auto;
   }
+
+  @media (max-width: 900px) {
+    .short-videos-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .short-videos-grid video {
+      aspect-ratio: 16/9;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .top-menu .menu {
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.95rem !important;
+      justify-content: center;
+    }
+    .top-menu .menu-item {
+      font-size: 0.95rem !important;
+      padding: 4px 0;
+      white-space: normal;
+    }
+    .top-menu {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px 0 0 0;
+    }
+    .top-menu .logo {
+      margin-bottom: 8px;
+      margin-right: 0;
+      font-size: 1rem !important;
+    }
+  }
   .short-videos-grid video {
     width: 100%;
     aspect-ratio: 16/9;
