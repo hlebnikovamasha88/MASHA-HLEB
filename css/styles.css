@@ -1,3 +1,14 @@
+    @media (max-width: 600px) {
+      .short-videos-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .short-videos-grid video {
+        aspect-ratio: 16/9;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
   /* Short video grid: плотная сетка без дырок */
   .short-videos-grid {
     display: grid;
