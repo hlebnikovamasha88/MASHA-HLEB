@@ -107,19 +107,7 @@
     padding: 0;
   }
 
-  @media (max-width: 600px) {
-    .short-videos-grid {
-      display: grid !important;
-      grid-template-columns: repeat(3, 1fr) !important;
-      gap: 8px !important;
-    }
-    .short-videos-grid video {
-      aspect-ratio: 16/9;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-  }
+
 
 
   /* Увеличение masonry-photo по клику */
