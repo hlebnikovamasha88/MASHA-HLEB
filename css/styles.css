@@ -127,19 +127,19 @@
         border: 1px solid #ccc !important;
       }
     }
+    /* Классический стиль логотипа */
+    /* MASHA HLEB: средне-жирный, Montserrat */
+    /* MASHA HLEB: менее жирный (Medium) */
     .top-menu .logo {
-      font-family: 'Montserrat', Arial, sans-serif !important;
-      font-weight: 700 !important;
-      font-style: normal !important;
-      font-stretch: normal !important;
-      font-size: 1.2rem !important;
-      color: #222 !important;
-      letter-spacing: 0.04em !important;
-      text-transform: uppercase !important;
-      margin-right: 48px !important;
-      white-space: nowrap !important;
-      text-decoration: none !important;
-      font-variation-settings: 'wght' 700 !important;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #222;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-right: 48px;
+      white-space: nowrap;
+      text-decoration: none;
     }
     /* --- ABOUT FINAL FIX --- */
     .about-name {
@@ -216,20 +216,7 @@
       justify-content: flex-start;
       margin-left: 0;
     }
-    .top-menu .menu-item {
-      font-size: 0.95rem !important;
-      padding: 2px 0;
-      white-space: normal;
-      transform: none !important;
-    .top-menu {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 8px 0 0 0;
-    }
-    .top-menu .logo {
-      margin-bottom: 4px;
-      margin-right: 0;
-      font-size: 1.1rem !important;
+    /* Удалены мобильные перебивающие стили меню */
     }
   }
   .short-videos-grid video {
@@ -284,7 +271,6 @@
   white-space: nowrap !important;
   text-transform: uppercase !important;
 }
-}
 .top-menu .logo {
   font-family: 'Montserrat', Arial, sans-serif !important;
   font-weight: 900 !important;
@@ -299,7 +285,6 @@
 .top-menu .menu {
   display: flex;
   gap: 48px;
-}
 }
 .top-menu .logo {
   font-family: 'Montserrat', 'Arial', sans-serif !important;
@@ -317,19 +302,22 @@
   gap: 32px;
   margin-left: auto;
 }
+/* Классический стиль пунктов меню */
+/* Пункты меню: обычный Montserrat, font-weight: 400 */
 .top-menu .menu-item {
-  font-family: 'Montserrat', 'Arial', sans-serif !important;
-  font-weight: 700;
-  font-size: 22px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
   color: #222;
   text-decoration: none;
   transition: color 0.2s;
   text-transform: uppercase;
 }
+/* Только смена цвета при наведении, без движения и увеличения */
 .top-menu .menu-item:hover {
   color: #888;
 }
-.top-menu .logo {
+/* Удалены лишние скобки, теперь CSS валиден */
   font-family: 'Montserrat', Arial, sans-serif !important;
   font-weight: 700 !important;
   font-style: normal !important;
@@ -346,15 +334,15 @@
   display: flex;
   gap: 48px;
 }
+/* Классический стиль пунктов меню */
 .top-menu .menu-item {
-  color: #222 !important;
-  text-decoration: none !important;
-  transition: color 0.2s !important;
-  font-size: 1.15rem !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
-  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s;
+  text-transform: uppercase;
 }
 .top-menu .menu-item:hover {
   color: #888 !important;
@@ -428,29 +416,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-  .video-item {
-    max-width: 100vw;
-    height: auto;
-    object-fit: contain;
-    max-height: none;
-  }
-    max-height: none;
-  }
-  border: none;
-  .video-item {
-    max-width: 100vw;
-    height: auto;
-    object-fit: contain;
-    max-height: none;
-  }
-    object-fit: contain;
-    max-height: none;
-  }
-  box-shadow: 0 2px 8px #0002;
-  transition: background 0.2s, opacity 0.2s;
-  opacity: 0.85;
-  z-index: 2;
+/* Удалены вложенные правила и лишние скобки */
 }
 .mute-btn:hover {
   background: #fff;
