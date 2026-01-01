@@ -1,3 +1,27 @@
+/* --- Гарантированная мобильная сетка для short-videos-grid --- */
+@media (max-width: 600px) {
+  .short-videos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 4px !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .short-videos-grid video {
+    aspect-ratio: 16/9 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    max-width: 100% !important;
+    background: #000 !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+}
 /* === CRITICAL OVERRIDES FOR MOBILE === */
 @media (max-width: 700px) {
   .about-flex {
@@ -89,23 +113,50 @@
     border: 1px solid #ccc !important;
   }
 }
+/* Сдвиг фото к левому краю и текст рядом */
 .about-flex {
-  gap: 0 !important;
-  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
 }
 .about-photo {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
+  max-width: 480px;
+  width: 38vw;
+  min-width: 220px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .about-text {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+  min-width: 180px;
 }
-.about-photo {
-  margin-left: 0 !important;
-}
-.about-text {
-  margin-left: 0 !important;
+@media (max-width: 900px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+  .about-photo {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0 auto 18px auto;
+    border-radius: 10px;
+  }
+  .about-text {
+    padding: 0 8vw;
+    width: 100%;
+    min-width: 0;
+  }
 }
 
     @media (max-width: 600px) {
@@ -130,6 +181,8 @@
     /* Классический стиль логотипа */
     /* MASHA HLEB: средне-жирный, Montserrat */
     /* MASHA HLEB: менее жирный (Medium) */
+    /* MASHA HLEB: ближе к левому краю */
+    /* MASHA HLEB: максимально к левому краю */
     .top-menu .logo {
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 500;
@@ -137,9 +190,12 @@
       color: #222;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      margin-left: 0px;
       margin-right: 48px;
       white-space: nowrap;
       text-decoration: none;
+    }
+    }
     }
     /* --- ABOUT FINAL FIX --- */
     .about-name {
