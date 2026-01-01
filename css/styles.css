@@ -239,6 +239,8 @@
 
   /* Short video grid: плотная сетка без дырок */
   /* Сетка short-videos-grid: 5 в ряд на десктопе */
+  /* Сетка short-videos-grid: без явного grid-template-columns, только на мобильном */
+  /* Сетка short-videos-grid: 5 в ряд на десктопе */
   .short-videos-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -246,6 +248,30 @@
     max-width: 1600px;
     margin: 40px auto 0 auto;
   }
+/* === ГАРАНТИЯ: 3 видео в ряд на телефоне (ТОЛЬКО ЭТОТ media-query В САМОМ КОНЦЕ) === */
+@media (max-width: 600px) {
+  .short-videos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 4px !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .short-videos-grid video {
+    aspect-ratio: 16/9 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    max-width: 100% !important;
+    background: #000 !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+}
 /* На телефоне — 3 видео в ряд, минимальные отступы */
 @media (max-width: 600px) {
   .short-videos-grid {
