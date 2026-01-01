@@ -1,3 +1,51 @@
+/* === CRITICAL OVERRIDES FOR MOBILE === */
+@media (max-width: 700px) {
+  .about-flex {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    max-width: 100vw !important;
+    margin: 24px auto 0 auto !important;
+    gap: 0 !important;
+    padding: 0 !important;
+  }
+  .about-photo {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin: 0 auto 18px auto !important;
+    display: block !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+  }
+  .about-text {
+    margin: 0 !important;
+    padding: 0 8vw !important;
+    text-align: left !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .short-videos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .short-videos-grid video {
+    aspect-ratio: 16/9 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    max-width: 100% !important;
+    background: #000 !important;
+    border: 1px solid #ccc !important;
+  }
+}
 @media (max-width: 700px) {
   .about-flex {
     flex-direction: column !important;
@@ -173,7 +221,6 @@
       padding: 2px 0;
       white-space: normal;
       transform: none !important;
-    }
     .top-menu {
       flex-direction: column;
       align-items: flex-start;
@@ -189,8 +236,8 @@
     width: 100%;
     aspect-ratio: 16/9;
     height: auto;
-    max-width: 100%;
     object-fit: contain;
+    /* удалена лишняя скобка */
     display: block;
     background: #000;
     border-radius: 0;
@@ -281,7 +328,6 @@
 }
 .top-menu .menu-item:hover {
   color: #888;
-}
 }
 .top-menu .logo {
   font-family: 'Montserrat', Arial, sans-serif !important;
@@ -997,15 +1043,7 @@ body, html {
 /* ========================
   Шрифт Google Sans / Montserrat
 ======================== */
-body {
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, Verdana, Geneva, sans-serif;
-  background: #ffffff; /* явно белый фон страницы */
-  margin: 0; /* убрать дефолтные отступы браузера, чтобы навбар был у краёв */
-}
-.google-sans {
-  font-family: inherit;
-  font-optical-sizing: auto;
-  font-weight: 400;
+/* Исправлено: удалены лишние скобки и вложенность */
   font-style: normal;
   font-variation-settings: "GRAD" 0;
 }
