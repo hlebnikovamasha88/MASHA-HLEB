@@ -261,38 +261,35 @@
     }
 /* Оставляем только один media-query для мобильных */
 
-  /* Short video grid: плотная сетка без дырок */
-  /* Сетка short-videos-grid: 5 в ряд на десктопе */
-  /* Сетка short-videos-grid: без явного grid-template-columns, только на мобильном */
-  /* Сетка short-videos-grid: 5 в ряд на десктопе */
-  /* Сетка short-videos-grid: без grid-template-columns, только на мобильном */
-  /* --- Short video grid: 5 в ряд на десктопе, 3 в ряд на телефоне --- */
-  .short-videos-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
-    max-width: 1600px;
-    margin: 40px auto 0 auto;
-  }
+/* --- Short video grid: 5 в ряд на десктопе --- */
+.short-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  max-width: 1600px;
+  margin: 40px auto 0 auto;
+}
 
-  @media (max-width: 600px) {
-    .short-videos-grid {
-      grid-template-columns: repeat(3, 1fr) !important;
-      gap: 4px !important;
-      max-width: 100vw !important;
-      width: 100vw !important;
-      margin: 0 auto !important;
-      padding: 0 !important;
-    }
-    .short-videos-grid video {
-      width: 100% !important;
-      height: auto !important;
-      object-fit: cover !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      display: block !important;
-    }
+/* === ГАРАНТИЯ: 3 видео в ряд на телефоне (ТОЛЬКО ЭТОТ media-query В САМОМ КОНЦЕ) === */
+@media (max-width: 600px) {
+  .short-videos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 4px !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
+  .short-videos-grid video {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+}
 /* === ГАРАНТИЯ: 3 видео в ряд на телефоне (ТОЛЬКО ЭТОТ media-query В САМОМ КОНЦЕ) === */
 @media (max-width: 600px) {
   .short-videos-grid {
