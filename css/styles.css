@@ -22,6 +22,30 @@
     display: block !important;
   }
 }
+/* === ГАРАНТИЯ: 3 видео в ряд на телефоне (ТОЛЬКО ЭТОТ media-query В САМОМ КОНЦЕ) === */
+@media (max-width: 600px) {
+  .short-videos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 4px !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .short-videos-grid video {
+    aspect-ratio: 16/9 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    max-width: 100% !important;
+    background: #000 !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+}
 /* === ГАРАНТИЯ: 3 видео в ряд на телефоне === */
 @media (max-width: 600px) {
   .short-videos-grid {
