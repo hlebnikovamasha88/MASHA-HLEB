@@ -27,7 +27,7 @@
 @media (max-width: 600px) {
   .short-videos-grid {
     display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 1px !important;
     width: 100vw !important;
     max-width: 100vw !important;
@@ -36,9 +36,9 @@
   }
   .short-videos-grid video {
     width: 100% !important;
-    height: 19vw !important;
-    min-height: 40px !important;
-    max-height: 20vw !important;
+    height: 33vw !important;
+    min-height: 80px !important;
+    max-height: 34vw !important;
     aspect-ratio: 16/9 !important;
     object-fit: cover !important;
     background: #000 !important;
