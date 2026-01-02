@@ -1,3 +1,11 @@
+/* --- Сдвиг основной сетки фото/видео вправо под логотип --- */
+.photos-grid,
+.masonry-gallery,
+.short-videos-grid,
+.video-grid {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 /* --- Short video grid: 5 в ряд на десктопе, 3 в ряд на телефоне --- */
 .short-videos-grid {
   display: grid;
@@ -965,7 +973,7 @@ body, html {
   font-size: 1.35rem;
   color: #222;
   text-decoration: none;
-  margin-left: 1cm;
+  margin-left: 4cm;
   margin-right: 0;
   white-space: nowrap;
   text-transform: uppercase;
