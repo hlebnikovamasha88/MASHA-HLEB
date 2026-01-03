@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Camara videos - MASHA HLEB</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/topmenu-fix.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRJRYRCXN6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FRJRYRCXN6');
+  </script>
+</head>
+<body>
+
+<nav class="top-menu">
+  <a href="index.html" class="menu-item logo">MASHA HLEB</a>
+  <div class="menu">
+    <a href="photos.html" class="menu-item">PHOTO</a>
+    <a href="video.html" class="menu-item">VIDEO</a>
+    <a href="shortvideo.html" class="menu-item">SHORT VIDEO</a>
+    <a href="contact.html" class="menu-item">ABOUT</a>
+  </div>
+</nav>
+
+<div style="margin-top:32px;"></div>
+
+<div class="video-grid">
+  <div class="video-wrap"><video class="video-item" src="camara videos/test full.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/full Lucia.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/Mia.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/Full HD.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+  <div class="video-wrap"><video class="video-item" src="camara videos/OSOI 709A.mp4" autoplay muted loop playsinline></video><button class="mute-btn" style="display:none;" aria-label="Включить/выключить звук">🔈</button></div>
+</div>
+<script>
+// Кастомная кнопка mute/unmute появляется при наведении
+document.querySelectorAll('.video-wrap').forEach(function(wrap) {
+  const video = wrap.querySelector('video');
+  const btn = wrap.querySelector('.mute-btn');
+  video.muted = true;
+  wrap.addEventListener('mouseenter', function() {
+    btn.style.display = 'block';
+  });
+  wrap.addEventListener('mouseleave', function() {
+    btn.style.display = 'none';
+  });
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    video.muted = !video.muted;
+    btn.textContent = video.muted ? '🔈' : '🔊';
+  });
+});
+</script>
