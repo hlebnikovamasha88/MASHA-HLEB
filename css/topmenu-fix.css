@@ -1,0 +1,63 @@
+/* === TOP MENU: как на скриншоте === */
+.top-menu {
+  width: 100%;
+  max-width: 1600px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 48px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: none;
+  position: static;
+}
+.top-menu .logo {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900 !important;
+  font-size: 1.35rem;
+  color: #222;
+  text-decoration: none;
+  margin-left: 0 !important;
+  margin-right: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+.top-menu .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: 0;
+  background: none;
+  padding: 0;
+}
+.top-menu .menu-item {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #222;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  white-space: nowrap;
+  box-shadow: none;
+}
+.top-menu .menu-item:hover {
+  color: #888;
+  text-decoration: none;
+}
