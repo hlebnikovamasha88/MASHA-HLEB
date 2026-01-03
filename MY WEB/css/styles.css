@@ -16,6 +16,7 @@
 }
 
 /* --- Short video grid: 5 в ряд на десктопе, 3 в ряд на телефоне --- */
+/* --- Short video grid: 5 в ряд на десктопе, 3 в ряд на телефоне --- */
 .short-videos-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -28,10 +29,10 @@
   .short-videos-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1px !important;
+    gap: 4px !important;
     width: 100vw !important;
     max-width: 100vw !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 0 !important;
   }
   .short-videos-grid video {
