@@ -9,17 +9,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRJRYRCXN6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FRJRYRCXN6');
-  </script>
+  <style>
+    .short-videos-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      max-width: 1600px;
+      margin: 40px auto 0 auto;
+    }
+    @media (max-width: 600px) {
+      .short-videos-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+      }
+      .short-videos-grid video {
+        width: 100% !important;
+        height: 33vw !important;
+        aspect-ratio: 16/9 !important;
+        object-fit: cover !important;
+        background: #000 !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+      }
+    }
+  </style>
 </head>
-<body>
-
 <body>
 
 <nav class="top-menu">
@@ -31,7 +51,17 @@
     <a href="contact.html" class="menu-item">ABOUT</a>
   </div>
 </nav>
-  <main>
+
+<main style="padding: 0; margin-top: 32px;">
+  <div class="short-videos-grid">
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/1.mp4" type="video/mp4"></video>
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/2.mp4" type="video/mp4"></video>
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/3.mp4" type="video/mp4"></video>
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/4.mp4" type="video/mp4"></video>
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/5.mp4" type="video/mp4"></video>
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/6.mp4" type="video/mp4"></video>
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/7.mp4" type="video/mp4"></video>
+    <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/8.mp4" type="video/mp4"></video>
     <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/9.mp4" type="video/mp4"></video>
     <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/10.mp4" type="video/mp4"></video>
     <video width="100%" height="180" autoplay muted loop playsinline><source src="videos/11.mp4" type="video/mp4"></video>
