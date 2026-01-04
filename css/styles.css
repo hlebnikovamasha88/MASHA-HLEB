@@ -27,10 +27,12 @@
 @media (max-width: 600px) {
   .short-videos-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 4px !important;
     margin: 0 auto !important;
     padding: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   .short-videos-grid video {
     width: 100% !important;
