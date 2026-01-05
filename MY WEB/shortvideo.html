@@ -9,14 +9,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRJRYRCXN6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FRJRYRCXN6');
-  </script>
+  <style>
+    nav, .top-menu, nav > div, .top-menu > div {
+      background: #fff !important;
+      border: 4px solid red !important;
+    }
+    .short-videos-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      max-width: 1600px;
+      margin: 40px auto 0 auto;
+    }
+    .top-menu {
+      background: #fff !important;
+    }
+    @media (max-width: 600px) {
+      .short-videos-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+      }
+      .short-videos-grid video {
+        width: 100% !important;
+        height: 33vw !important;
+        aspect-ratio: 16/9 !important;
+        object-fit: cover !important;
+        background: #000 !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -85,3 +114,4 @@
   </div>
 </main>
 </body>
+</html>
