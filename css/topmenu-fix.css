@@ -1,3 +1,7 @@
+/* Отступ справа для логотипа в меню */
+.top-menu .menu-item.logo {
+  margin-right: 48px !important;
+}
 
 .top-menu {
   display: flex !important;
