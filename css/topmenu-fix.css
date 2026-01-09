@@ -1,11 +1,18 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
 /* === TOP MENU: как на скриншоте === */
 .top-menu {
+    padding: 48px 0 0 0;
   width: 100%;
   max-width: 1600px;
   background: #fff;
   margin-left: auto;
   margin-right: auto;
   padding: 48px 0 0 0;
+  margin-top: 0;
+  margin-top: 0 !important;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -20,7 +27,7 @@
   font-size: 1.35rem;
   color: #222;
   text-decoration: none;
-  margin-left: 0 !important;
+  margin-left: 120px !important;
   margin-right: auto !important;
   white-space: nowrap;
   text-transform: uppercase;

@@ -1,22 +1,49 @@
-<<<<<<< HEAD
-/*!
-* Start Bootstrap - Bare v5.0.9 (https://startbootstrap.com/template/bare)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-bare/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
-=======
-// Увеличение фото по клику для masonry-gallery
+// Shared Lightbox for images and short videos
+document.addEventListener('DOMContentLoaded', () => {
+  // Ensure lightbox exists
+  let lightbox = document.getElementById('lightbox');
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+      <button class="lightbox__close" aria-label="Close">×</button>
+      <div class="lightbox__content"></div>
+      <div class="lightbox__backdrop"></div>
+    `;
+    document.body.appendChild(lightbox);
+  }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const gallery = document.querySelector('.masonry-gallery');
-  if (!gallery) return;
-  gallery.addEventListener('click', function(e) {
-    const target = e.target;
-    if (target.classList.contains('masonry-photo')) {
-      target.classList.toggle('zoomed');
-    }
+  const content = lightbox.querySelector('.lightbox__content');
+  const closeBtn = lightbox.querySelector('.lightbox__close');
+  const open = () => { lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); };
+  const close = () => { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); content.innerHTML=''; };
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox__backdrop') || e.target === closeBtn) close();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  // Image lightbox on photos page
+  document.body.addEventListener('click', (e) => {
+    const img = e.target.closest('.masonry-photo');
+    if (!img) return;
+    e.preventDefault();
+    content.innerHTML = `<img src="${img.src}" alt="" style="max-width:90vw;max-height:90vh;display:block;box-shadow:0 8px 40px #0008"/>`;
+    open();
+  });
+
+  // Video lightbox on short video grid
+  document.body.addEventListener('click', (e) => {
+    const v = e.target.closest('.short-videos-grid video');
+    if (!v) return;
+    e.preventDefault();
+    const clone = document.createElement('video');
+    clone.src = v.currentSrc || v.getAttribute('src');
+    clone.controls = true; clone.autoplay = true; clone.muted = false; clone.playsInline = true;
+    clone.style.maxWidth = '90vw'; clone.style.maxHeight = '90vh'; display = 'block';
+    content.innerHTML = '';
+    content.appendChild(clone);
+    open();
   });
 });
->>>>>>> c95f1c8618f5b9326576ca3e9b02e2476c44ebea
