@@ -8,29 +8,32 @@
 }
 /* --- Short video grid: 5 в ряд на десктопе, 3 в ряд на телефоне --- */
 .short-videos-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
   gap: 18px;
   max-width: 1600px;
   margin: 40px auto 0 auto;
   padding: 0 32px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .short-videos-grid video {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16/9 !important;
+  object-fit: cover !important;
   background: #000;
   border: none;
   margin: 0;
   padding: 0;
-  display: block;
+  display: block !important;
+  max-width: 100%;
 }
 
 @media (max-width: 1200px) {
   .short-videos-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
