@@ -190,6 +190,8 @@
     column-gap: 0;
     max-width: 1600px;
     margin: 40px auto 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
   }
   .masonry-photo {
     width: 100%;
