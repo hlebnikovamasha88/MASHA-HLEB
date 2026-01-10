@@ -986,8 +986,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 32px 16px 48px;
-    min-height: 70vh;
+    padding: 32px 16px 24px;
+    min-height: 50vh;
   }
   .home .hero img {
     max-width: 90vw !important;
