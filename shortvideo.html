@@ -92,5 +92,14 @@
 </div>
 
 <script src="js/scripts.js"></script>
+<script>
+  // Auto-play short videos when they load
+  document.querySelectorAll('.short-videos-grid video').forEach(video => {
+    video.play().catch(() => {
+      // Fallback: try playing on user interaction
+      document.addEventListener('click', () => video.play(), { once: true });
+    });
+  });
+</script>
 </body>
 </html>
