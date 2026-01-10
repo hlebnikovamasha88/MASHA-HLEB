@@ -46,4 +46,48 @@ document.addEventListener('DOMContentLoaded', () => {
     content.appendChild(clone);
     open();
   });
+
+  // Play/pause short videos only when visible to reduce reloads on mobile
+  const shortVideos = Array.from(document.querySelectorAll('.short-videos-grid video'));
+  if (shortVideos.length) {
+    shortVideos.forEach((v) => {
+      v.muted = true;
+      v.playsInline = true;
+      v.loop = true;
+      v.preload = 'metadata';
+      v.removeAttribute('autoplay');
+      v.pause();
+    });
+
+    const tryPlay = (video) => { video.play().catch(() => {}); };
+    const tryPause = (video) => { video.pause(); };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(({ isIntersecting, target }) => {
+          if (isIntersecting) {
+            tryPlay(target);
+          } else {
+            tryPause(target);
+          }
+        });
+      }, { threshold: 0.35 });
+      shortVideos.forEach((v) => observer.observe(v));
+    } else {
+      const onScroll = () => {
+        shortVideos.forEach((v) => {
+          const rect = v.getBoundingClientRect();
+          const visible = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
+          if (visible) {
+            tryPlay(v);
+          } else {
+            tryPause(v);
+          }
+        });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    }
+  }
 });
