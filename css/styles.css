@@ -15,6 +15,12 @@
   margin: 40px auto 0 auto;
 }
 
+@media (max-width: 1200px) {
+  .short-videos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .short-videos-grid {
     display: grid !important;
