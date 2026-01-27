@@ -182,7 +182,7 @@
   /* === RESPONSIVE PHOTO GALLERY === */
   @media (max-width: 1200px) {
     .masonry-gallery {
-      column-count: 3;
+      column-count: 4;
       column-gap: 16px;
       max-width: 100% !important;
       width: 100% !important;
@@ -193,7 +193,7 @@
 
   @media (max-width: 900px) {
     .masonry-gallery {
-      column-count: 2;
+      column-count: 4;
       column-gap: 16px;
       max-width: 100% !important;
       width: 100% !important;
@@ -906,7 +906,7 @@ body, html {
 
 @media (max-width: 900px) {
   .photos-grid {
-   grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .hero img {
