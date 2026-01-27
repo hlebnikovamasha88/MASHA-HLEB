@@ -906,7 +906,7 @@ body, html {
 
 @media (max-width: 900px) {
   .photos-grid {
-    grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 .hero img {
