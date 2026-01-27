@@ -204,7 +204,7 @@
 
   @media (max-width: 600px) {
     .masonry-gallery {
-      column-count: 1;
+      column-count: 4;!important;
       column-gap: 8px;
       max-width: 100% !important;
       width: 100% !important;
